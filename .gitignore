@@ -1,0 +1,52 @@
+# Python related
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+.env
+
+# Flask specific
+instance/
+.venv/
+venv/
+env/
+*.db
+*.sqlite3
+*.log
+
+
+# Virtual environment
+venv/
+.env/
+
+# Flask migrations folder
+migrations/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Coverage report
+.coverage
+*.coveragerc
+
+# Pytest
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Other
+*.bak
+*.tmp
+
+# PyCharm
+*.iml

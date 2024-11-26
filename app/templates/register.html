@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Register</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}  <!-- For CSRF protection -->
+    
+    <label>Username:</label>
+    {{ form.username(size=32) }}  <!-- Bind form field to the HTML input -->
+    
+    <label>Email:</label>
+    {{ form.email(size=32) }}
+    
+    <label>Password:</label>
+    {{ form.password(size=32) }}
+    
+    <label>Role:</label>
+    {{ form.role() }}  <!-- Dropdown for role -->
+    
+    <button type="submit">Register</button>
+</form>
+{% endblock %}
+

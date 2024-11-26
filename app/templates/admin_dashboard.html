@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Admin Dashboard</h2>
+    <p>Here, you can approve or reject admin requests.</p>
+
+    {% if pending_admin_requests %}
+        <h3>Pending Admin Requests</h3>
+        <ul>
+            {% for user in pending_admin_requests %}
+                <li>
+                    <strong>{{ user.username }}</strong> - {{ user.email }}
+                    <a href="{{ url_for('main.approve_admin', user_id=user.id) }}">Approve</a> |
+                    <a href="{{ url_for('main.reject_admin', user_id=user.id) }}">Reject</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No pending admin requests.</p>
+    {% endif %}
+{% endblock %}

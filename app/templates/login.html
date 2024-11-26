@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Login</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}  <!-- Include CSRF token -->
+    
+    <div>
+        <label for="email">Email:</label>
+        {{ form.email(class="form-control", id="email", required=True) }}  <!-- Form field for email -->
+    </div>
+
+    <div>
+        <label for="password">Password:</label>
+        {{ form.password(class="form-control", id="password", required=True) }}  <!-- Form field for password -->
+    </div>
+
+    <div>
+        <label for="remember">Remember me:</label>
+        {{ form.remember() }}  <!-- Remember me checkbox -->
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Welcome to the Dashboard, {{ current_user.username }}!</h2>
+    <p>Here, you can manage your tasks, view reports, and more.</p>
+    
+    {% if current_user.role == 'Admin' %}
+        <p>You have Admin privileges, allowing you to access all system features.</p>
+        <a href="{{ url_for('main.admin_dashboard') }}">Go to Admin Dashboard</a>
+    {% else %}
+        <p>You are a regular user with limited access.</p>
+    {% endif %}
+    
+    <a href="{{ url_for('auth.logout') }}">Logout</a>
+{% endblock %}
