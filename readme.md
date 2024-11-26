@@ -1,6 +1,3 @@
-Here is the full content in markdown format that you can directly copy into your `README.md` file:
-
-```markdown
 # Flask RBAC System with Admin Approval
 
 This is a **Flask-based web application** that demonstrates a **Role-Based Access Control (RBAC)** system with **admin approval functionality**. The application allows users to register with either a **User** or **Admin** role. If an admin already exists, any user registering as an admin will be redirected to the admin dashboard for approval. The current admin can approve or reject pending admin requests.
@@ -141,4 +138,4 @@ flask-rbac-system/
 ├── run.py                 # Entry point to run the application
 ├── .env                   # Environment variables configuration
 └── README.md              # Project documentation
-```
+
